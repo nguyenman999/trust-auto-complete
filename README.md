@@ -1,10 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+This is complete boilerplate for every frontend project, that created by [Create React App](https://github.com/facebook/create-react-app) in combination with other 3rd library to manage the state and side effect. These are list of 3rd library used in this project
+- [Redux](https://redux.js.org/): state management library.
+- [React Redux](https://github.com/reduxjs/react-redux): the libray responsible for bindings react and redux.
+- [Redux Dev Tool Extenstion](https://github.com/zalmoxisus/redux-devtools-extension): the developer tools.
+- [Saga](https://redux-saga.js.org/): is a library that aims to make application side effects.
+- [React Router](https://reactrouter.com/): declarative routing library.
+- [Connected React Router](https://github.com/supasate/connected-react-router): Simple bindings library to keep react-router and redux in sync.
 
+## List of avaiable command in this project
 In the project directory, you can run:
 
-### `yarn start`
+`npm run start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,57 +19,33 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+`npm run test`
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+`npm run build`
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Code standard
+- **Editor config**
+  
+  This project intend to be used vscode as a prefer code editor so in the repository it contains the **.editorconfig** file. That defined the common setup for the code editor on every machine. So please do not change or modify this file (just in case you really need to update it).
+- **Code format**
+  
+  This project have setup the [prettier](https://prettier.io/) in combination with [eslint](https://eslint.org/) to ensure the code to be consistently on every commit. The code formater will be run automatically everytime developer commit the change to the repository.
 
-### `yarn eject`
+## Code quality
+- **UI test**
+  
+  This project have setup the storybook for you to develop the new UI component. The storybook will help you render every single component and interative with it in just someline of code. So that you will easy to create the look and feel of the new UI component and test it before use. Pls note that for every new UI component that intent to be used as the common UI should create a storybook and docs for it.
+- **Unit test**
+  
+  Pls write the unit test for every line of code that you have created before commit to the repository. Because of that, this project have setup the coverage threshold upto 90%.
+  
+Because of this boilerplate is using all of 3rd party library at root so that is is containing alot of boilerplate code when we develope a new features. So that I have created an enhancement of this project in combination with redux-toolkit to reduce the number of boilerplate code (Pls reference to this: https://github.com).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
