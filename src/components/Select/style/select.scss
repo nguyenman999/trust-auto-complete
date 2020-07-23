@@ -46,33 +46,19 @@
   }
 
   // ========================== Arrow ==========================
-  // &-arrow {
-  //   .iconfont-mixin();
-  //   position: absolute;
-  //   top: 53%;
-  //   right: @control-padding-horizontal - 1px;
-  //   width: @font-size-sm;
-  //   height: @font-size-sm;
-  //   margin-top: -@font-size-sm / 2;
-  //   color: @disabled-color;
-  //   font-size: @font-size-sm;
-  //   line-height: 1;
-  //   text-align: center;
-  //   pointer-events: none;
-
-  //   .@{iconfont-css-prefix} {
-  //     vertical-align: top;
-  //     transition: transform 0.3s;
-
-  //     > svg {
-  //       vertical-align: top;
-  //     }
-
-  //     &:not(.@{select-prefix-cls}-suffix) {
-  //       pointer-events: auto;
-  //     }
-  //   }
-  // }
+  &-arrow {
+    position: absolute;
+    top: 53%;
+    left: $control-padding-horizontal - 1px;
+    width: $font-size-sm;
+    height: $font-size-sm;
+    margin-top: -$font-size-sm / 2;
+    color: $disabled-color;
+    font-size: $font-size-sm;
+    line-height: 1;
+    text-align: center;
+    pointer-events: none;
+  }
 
   // ========================== Clear ==========================
   &-clear {

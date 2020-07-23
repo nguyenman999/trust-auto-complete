@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row } from '../../../../components/Grid';
-import Toggle from 'react-toggle';
+import Switch from '../../../../components/Switch';
 import { ReactComponent as Night } from '../../../../assets/night-icon.svg';
 import { ReactComponent as Sunny } from '../../../../assets/sunny-icon.svg';
 import { ReactComponent as CollapseMenu } from '../../../../assets/menu-icon.svg';
@@ -10,7 +10,7 @@ const Menu = (props) => {
   const { data, isMobile } = props;
   return (
     <Row className={styles.container} justify="end" align="middle">
-      <Toggle
+      <Switch
         icons={{
           checked: <Night />,
           unchecked: <Sunny />,

@@ -1,0 +1,38 @@
+@import '../../style/themes/index.scss';
+@import '../../style/mixins/index.scss';
+
+$select-prefix-cls: '#{$ui-prefix}-select';
+$autocomplete-prefix-cls: '#{$select-prefix-cls}-auto-complete';
+
+.#{$autocomplete-prefix-cls} {
+  @include reset-component;
+
+  .#{$select-prefix-cls}-clear {
+    right: 13px;
+  }
+
+  .#{$select-prefix-cls}-arrow {
+    position: absolute;
+    top: 40%;
+    left: $control-padding-horizontal - 1px;
+    width: $font-size-sm;
+    height: $font-size-sm;
+    margin-top: -$font-size-sm / 2;
+    color: $disabled-color;
+    font-size: $font-size-sm;
+    line-height: 1;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  // With arrow should provides `padding-left` to show the arrow
+  &.#{$select-prefix-cls}-show-arrow .#{$select-prefix-cls}-selection-search {
+    left: $input-padding-horizontal-base + 2 * $font-size-base;
+  }
+
+  &.#{$select-prefix-cls}-show-arrow .#{$select-prefix-cls}-selection-item,
+  &.#{$select-prefix-cls}-show-arrow
+    .#{$select-prefix-cls}-selection-placeholder {
+    padding-left: 1.5 * $selection-item-padding;
+  }
+}

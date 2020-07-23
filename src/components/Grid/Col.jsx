@@ -1,19 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
 
-// https://github.com/ant-design/ant-design/issues/14324
-// const ColSpanType = [number, string];
-
-// const FlexType = [number, 'none', 'auto', string];
-
-// export interface ColSize {
-//   span?: ColSpanType;
-//   order?: ColSpanType;
-//   offset?: ColSpanType;
-//   push?: ColSpanType;
-//   pull?: ColSpanType;
-// }
-
 function parseFlex(flex) {
   if (typeof flex === 'number') {
     return `${flex} ${flex} auto`;
@@ -39,7 +26,6 @@ const Col = (props) => {
     flex,
     style,
     gutter,
-    direction,
     ...others
   } = props;
   let sizeClassObj = {};
@@ -65,7 +51,6 @@ const Col = (props) => {
         sizeProps.push || sizeProps.push === 0,
       [`${prefixCls}-${size}-pull-${sizeProps.pull}`]:
         sizeProps.pull || sizeProps.pull === 0,
-      [`${prefixCls}-rtl`]: direction === 'rtl',
     };
   });
   const classes = classNames(
@@ -112,23 +97,6 @@ const Col = (props) => {
 
 Col.defaultProps = {
   prefixCls: 'ts-col',
-  direction: 'ltr',
 };
-
-// Col.propTypes = {
-//   span: PropTypes.oneOf();
-//   order?: ColSpanType;
-//   offset?: ColSpanType;
-//   push?: ColSpanType;
-//   pull?: ColSpanType;
-//   xs?: ColSpanType | ColSize;
-//   sm?: ColSpanType | ColSize;
-//   md?: ColSpanType | ColSize;
-//   lg?: ColSpanType | ColSize;
-//   xl?: ColSpanType | ColSize;
-//   xxl?: ColSpanType | ColSize;
-//   prefixCls: string;
-//   flex: FlexType;
-// }
 
 export default Col;

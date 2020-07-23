@@ -5,8 +5,6 @@
 // ------------------------
 
 @mixin loop-grid-columns($index, $class) {
-  @debug 'loop-grid-columns: #{$index} - #{$class}';
-
   @if ($index > 0) {
     .#{$ui-prefix}-col#{$class}-#{$index} {
       display: block;

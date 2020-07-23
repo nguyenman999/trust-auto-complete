@@ -1,24 +1,5 @@
 import * as React from 'react';
 import classNames from 'classnames';
-// import { ConfigConsumer, ConfigConsumerProps } from '../config-provider';
-// import RowContext from './RowContext';
-// import { tuple } from '../_util/type';
-// import ResponsiveObserve, {
-//   Breakpoint,
-//   ScreenMap,
-//   responsiveArray,
-// } from '../_util/responsiveObserve';
-
-// const RowAligns = tuple('top', 'middle', 'bottom', 'stretch');
-// const RowJustify = tuple('start', 'end', 'center', 'space-around', 'space-between');
-
-// export type Gutter = number | Partial<Record<Breakpoint, number>>;
-// export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
-//   gutter?: Gutter | [Gutter, Gutter];
-//   align?: typeof RowAligns[number];
-//   justify?: typeof RowJustify[number];
-//   prefixCls?: string;
-// }
 
 const Row = (props) => {
   const {
