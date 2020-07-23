@@ -1,0 +1,105 @@
+@import '../../../style/themes/index.scss';
+@import '../../../style/mixins/index.scss';
+@import './mixin.scss';
+
+// Grid system
+.#{$ui-prefix}-row {
+  display: flex;
+  flex-flow: row wrap;
+
+  &::before,
+  &::after {
+    display: flex;
+  }
+}
+
+.#{$ui-prefix}-row-start {
+  justify-content: flex-start;
+}
+
+.#{$ui-prefix}-row-center {
+  justify-content: center;
+}
+
+.#{$ui-prefix}-row-end {
+  justify-content: flex-end;
+}
+
+.#{$ui-prefix}-row-space-between {
+  justify-content: space-between;
+}
+
+.#{$ui-prefix}-row-space-around {
+  justify-content: space-around;
+}
+
+.#{$ui-prefix}-row-top {
+  align-items: flex-start;
+}
+
+.#{$ui-prefix}-row-middle {
+  align-items: center;
+}
+
+.#{$ui-prefix}-row-bottom {
+  align-items: flex-end;
+}
+
+.#{$ui-prefix}-col {
+  position: relative;
+  max-width: 100%;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+}
+
+@include make-grid();
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+@include make-grid(-xs);
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+  @include make-grid(-sm);
+}
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+  @include make-grid(-md);
+}
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+  @include make-grid(-lg);
+}
+
+// Extra Large grid
+//
+// Columns, offsets, pushes, and pulls for the full hd device range.
+
+@media (min-width: $screen-xl-min) {
+  @include make-grid(-xl);
+}
+
+// Extra Extra Large grid
+//
+// Columns, offsets, pushes, and pulls for the full hd device range.
+
+@media (min-width: $screen-xxl-min) {
+  @include make-grid(-xxl);
+}
+
+@import './rtl.scss';

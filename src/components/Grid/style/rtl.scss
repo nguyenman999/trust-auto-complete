@@ -1,0 +1,78 @@
+@import '../../../style/themes/index.scss';
+@import '../../../style/mixins/index.scss';
+
+.#{$ui-prefix}-row {
+  &-rtl {
+    direction: rtl;
+  }
+}
+
+.#{$ui-prefix}-col {
+  &-rtl {
+    float: right;
+  }
+}
+
+// mixin
+@mixin loop-grid-columns($index, $class) {
+  @if ($index > 0) {
+    .#{$ui-prefix}-col#{class}-push-#{index} {
+      // reset property in RTL direction
+      &.#{$ui-prefix}-col-rtl {
+        right: percentage($index / $grid-columns);
+        left: auto;
+      }
+    }
+
+    .#{$ui-prefix}-col#{class}-pull-#{index} {
+      // reset property in RTL direction
+      &.#{$ui-prefix}-col-rtl {
+        right: auto;
+        left: percentage($index / $grid-columns);
+      }
+    }
+
+    .#{$ui-prefix}-col#{class}-offset-#{index} {
+      // reset property in RTL direction
+      &.#{$ui-prefix}-col-rtl {
+        margin-right: percentage($index / $grid-columns);
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@mixin loop-grid-columns($index, $class) {
+  @if ($index = 0) {
+    .#{$ui-prefix}-col-push-#{$index} {
+      // reset property in RTL direction
+      &.#{$ui-prefix}-col-rtl {
+        right: auto;
+      }
+    }
+
+    .#{$ui-prefix}-col-pull-#{$index} {
+      &.#{$ui-prefix}-col-rtl {
+        left: auto;
+      }
+    }
+
+    .#{$ui-prefix}-col#{class}-push-#{$index} {
+      &.#{$ui-prefix}-col-rtl {
+        right: auto;
+      }
+    }
+
+    .#{$ui-prefix}-col#{class}-pull-#{$index} {
+      &.#{$ui-prefix}-col-rtl {
+        left: auto;
+      }
+    }
+
+    .#{$ui-prefix}-col#{class}-offset-#{$index} {
+      &.#{$ui-prefix}-col-rtl {
+        margin-right: 0;
+      }
+    }
+  }
+}

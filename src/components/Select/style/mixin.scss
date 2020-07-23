@@ -1,0 +1,51 @@
+@import '../../../style/themes/index.scss';
+@import '../../../style/mixins/index.scss';
+
+$select-prefix-cls: '#{$ui-prefix}-select';
+$select-height-without-border: $input-height-base - 2 * $border-width-base;
+$select-dropdown-edge-child-vertical-padding: $dropdown-edge-child-vertical-padding;
+
+@mixin select-selector() {
+  position: relative;
+  background-color: $select-background;
+  border: $border-width-base $border-style-base $select-border-color;
+  border-radius: $border-radius-base;
+  transition: all 0.3s $ease-in-out;
+
+  input {
+    cursor: pointer;
+  }
+
+  .#{$select-prefix-cls}-show-search#{&} {
+    cursor: text;
+
+    input {
+      cursor: auto;
+    }
+  }
+
+  .#{$select-prefix-cls}-focused#{&} {
+    //.active();
+  }
+
+  .#{$select-prefix-cls}-disabled#{&} {
+    color: $disabled-color;
+    background: $input-disabled-bg;
+    cursor: not-allowed;
+
+    input {
+      cursor: not-allowed;
+    }
+  }
+}
+
+/* Reset search input style */
+@mixin select-search-input-without-border() {
+  .#{$select-prefix-cls}-selection-search-input {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+}
