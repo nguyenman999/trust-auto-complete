@@ -12,8 +12,6 @@ describe('Switch', () => {
         }}
       />,
     );
-    screen.debug();
-
     // it should render component properly
     screen.getByText('checked');
     screen.getByText('unchecked');

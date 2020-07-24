@@ -19,8 +19,12 @@ const Menu = (props) => {
       {isMobile ? (
         <CollapseMenu className={styles['menu-item']} />
       ) : (
-        data.map((item) => {
-          return <div className={styles['menu-item']}>{item}</div>;
+        data.map((item, index) => {
+          return (
+            <div className={styles['menu-item']} key={index}>
+              {item}
+            </div>
+          );
         })
       )}
     </Row>

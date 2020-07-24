@@ -21,7 +21,7 @@ const Content = () => {
   };
 
   const onSelect = (data) => {
-    console.log('onSelect', data);
+    //console.log('onSelect', data);
   };
 
   const onChange = (data) => {
@@ -36,8 +36,8 @@ const Content = () => {
             className={styles['auto-complete-container']}
             placeholder="Try Vietnam"
             inputIcon={<Search />}
-            value={value}
             options={options}
+            value={value}
             onSelect={onSelect}
             onSearch={onSearch}
             onChange={onChange}
