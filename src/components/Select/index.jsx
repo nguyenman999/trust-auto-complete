@@ -52,6 +52,7 @@ Select.Option = Option;
 Select.defaultProps = {
   prefixCls: 'ts-select',
   transitionName: 'slide-up',
+  mode: 'combobox',
 };
 
 Select.propTypes = {
