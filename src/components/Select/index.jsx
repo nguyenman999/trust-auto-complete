@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import RcSelect from 'rc-select';
+import PropTypes from 'prop-types';
 
 const Select = (props) => {
   const renderSelect = () => {
@@ -51,7 +52,17 @@ Select.Option = Option;
 Select.defaultProps = {
   prefixCls: 'ts-select',
   transitionName: 'slide-up',
-  mode: 'combobox',
+};
+
+Select.propTypes = {
+  /**
+   * Icon will show after the input box.
+   */
+  inputIcon: PropTypes.node,
+  /**
+   * The inline css style
+   */
+  style: PropTypes.object,
 };
 
 export default Select;

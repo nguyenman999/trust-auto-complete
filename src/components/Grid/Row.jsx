@@ -1,5 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 const Row = (props) => {
   const {
@@ -54,6 +55,23 @@ const Row = (props) => {
 Row.defaultProps = {
   prefixCls: 'ts-row',
   direction: 'ltr',
+};
+
+Row.propTypes = {
+  /**
+   * Vertical alignment
+   */
+  align: PropTypes.oneOf(['top', 'middle', 'bottom']),
+  /**
+   * Horizontal arrangement
+   */
+  justify: PropTypes.oneOf([
+    'start',
+    'end',
+    'center',
+    'space-around',
+    'space-between',
+  ]),
 };
 
 export default Row;

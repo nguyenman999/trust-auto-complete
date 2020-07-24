@@ -46,10 +46,12 @@ That will run the storybook for you to start UI developement.
 - **UI test**
   
   This project have setup the storybook for you to develop the new UI component. The storybook will help you render every single component and interative with it in just someline of code. So that you will easy to create the look and feel of the new UI component and test it before use. Pls note that for every new UI component that intent to be used as the common UI should create a storybook and docs for it.
-  
+
 - **Unit test**
   
   This project is using [React Testing Library](https://testing-library.com/) as [Jest](https://jestjs.io/) as test runner. We should write the test like the user do. 
   
-
+- **Deployement**
+  
+  This project have setup the CI/CD with Netlify. So that everytime you push your code to the repository. It will deploy automaticall.
 

@@ -7,7 +7,7 @@ export default {
 
 export const Default = () => {
   return (
-    <Select showSearch mode="combobox" style={{ width: 200 }}>
+    <Select style={{ width: 200 }}>
       <Select.Option key="1234" value={1234}>
         1234
       </Select.Option>

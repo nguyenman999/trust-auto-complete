@@ -1,5 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 function parseFlex(flex) {
   if (typeof flex === 'number') {
@@ -13,6 +14,10 @@ function parseFlex(flex) {
   return flex;
 }
 
+/**
+ * The responsive column that render div as a resposive container. The applicable class
+ * will apply when the screen size meet the breakpoint
+ */
 const Col = (props) => {
   const {
     prefixCls,
@@ -97,6 +102,41 @@ const Col = (props) => {
 
 Col.defaultProps = {
   prefixCls: 'ts-col',
+};
+
+Col.propTypes = {
+  /**
+   * Raster number of cells to occupy, 0 corresponds to display: none
+   */
+  span: PropTypes.number,
+  /**
+   * The number of cells to offset Col from the left
+   */
+  offset: PropTypes.number,
+  /**
+   * screen < 576px and also default setting, could be a span value or an object containing above props
+   */
+  xs: PropTypes.number,
+  /**
+   * screen ≥ 576px, could be a span value or an object containing above props
+   */
+  sm: PropTypes.number,
+  /**
+   * screen ≥ 768px, could be a span value or an object containing above props
+   */
+  md: PropTypes.number,
+  /**
+   * screen ≥ 992px, could be a span value or an object containing above props
+   */
+  lg: PropTypes.number,
+  /**
+   * screen ≥ 1200px, could be a span value or an object containing above props
+   */
+  xl: PropTypes.number,
+  /**
+   * screen ≥ 1600px, could be a span value or an object containing above props
+   */
+  xxl: PropTypes.number,
 };
 
 export default Col;

@@ -6,16 +6,23 @@ import Select from './index';
 describe('Select', () => {
   test('should render default', () => {
     render(
-      <Select
-        style={{ width: 200 }}
-        inputIcon={<div>Icon</div>}
-        options={[
-          { text: 'text', value: 'text' },
-          { text: 'abc', value: 'abc' },
-          { text: 'asd', value: 'asd' },
-          { text: 'wes', value: 'wes' },
-        ]}
-      />,
+      <Select style={{ width: 200 }}>
+        <Select.Option key="1234" value={1234}>
+          1234
+        </Select.Option>
+        <Select.Option key="1243" value={1243}>
+          1243
+        </Select.Option>
+        <Select.Option key="1235" value={1235}>
+          1235
+        </Select.Option>
+        <Select.Option key="1237" value={1237}>
+          1237
+        </Select.Option>
+        <Select.Option key="1236" value={1236}>
+          1236
+        </Select.Option>
+      </Select>,
     );
     // it should render the input tag and icon
     screen.getByRole('combobox');

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col } from '../../../../components/Grid';
+import PropTypes from 'prop-types';
 
 const Header = (props) => {
   const { logo, desktopMenu, mobileMenu } = props;
@@ -16,6 +17,21 @@ const Header = (props) => {
       </Col>
     </Row>
   );
+};
+
+Header.propTypes = {
+  /**
+   * Anything that can be rendered, The logo will be on the top left of the screen.
+   */
+  logo: PropTypes.node,
+  /**
+   * The long list of menu that will be rendered on large screen size
+   */
+  desktopMenu: PropTypes.node,
+  /**
+   * The long list of menu that will be rendered on small screen size
+   */
+  mobileMenu: PropTypes.node,
 };
 
 export default Header;
